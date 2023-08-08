@@ -1,0 +1,32 @@
+{
+    "timer": 10000,
+    "chords": {
+        "major": {
+            "C": false,
+            "D": false,
+            "E": false,
+            "F": false,
+            "G": false,
+            "A": false,
+            "H": false
+        },
+        "minor": {
+            "C": false,
+            "D": false,
+            "E": false,
+            "F": false,
+            "G": false,
+            "A": false,
+            "H": false
+        },
+        "7": {
+            "C": false,
+            "D": false,
+            "E": false,
+            "F": false,
+            "G": false,
+            "A": false,
+            "H": false
+        }
+    }
+}
