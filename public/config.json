@@ -2,31 +2,31 @@
     "timer": 10000,
     "chords": {
         "major": {
-            "C": false,
-            "D": false,
-            "E": false,
-            "F": false,
-            "G": false,
-            "A": false,
-            "H": false
+            "C": true,
+            "D": true,
+            "E": true,
+            "F": true,
+            "G": true,
+            "A": true,
+            "H": true
         },
-        "minor": {
-            "C": false,
-            "D": false,
-            "E": false,
-            "F": false,
-            "G": false,
-            "A": false,
-            "H": false
+        "mi": {
+            "C": true,
+            "D": true,
+            "E": true,
+            "F": true,
+            "G": true,
+            "A": true,
+            "H": true
         },
         "7": {
-            "C": false,
-            "D": false,
-            "E": false,
-            "F": false,
-            "G": false,
-            "A": false,
-            "H": false
+            "C": true,
+            "D": true,
+            "E": true,
+            "F": true,
+            "G": true,
+            "A": true,
+            "H": true
         }
     }
 }

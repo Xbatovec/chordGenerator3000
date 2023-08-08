@@ -45,6 +45,11 @@ body {
     background-color: var(--load-background);
 }
 
+@keyframes load-animation {
+    0% {width: 100%;}
+    100% {width: 0;}
+}
+
 /* plane */
 #plane {
     display: flex;
