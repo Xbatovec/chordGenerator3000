@@ -1,32 +1,37 @@
 {
-    "timer": 10000,
+    "timer": 6000,
+    "chordRow": {
+        "enabled": true,
+        "customTimer": true,
+        "row": "default"
+    },
     "chords": {
         "major": {
             "C": true,
             "D": true,
             "E": true,
-            "F": true,
+            "F": false,
             "G": true,
             "A": true,
-            "H": true
+            "H": false
         },
         "mi": {
-            "C": true,
+            "C": false,
             "D": true,
             "E": true,
-            "F": true,
-            "G": true,
+            "F": false,
+            "G": false,
             "A": true,
-            "H": true
+            "H": false
         },
         "7": {
-            "C": true,
+            "C": false,
             "D": true,
-            "E": true,
-            "F": true,
+            "E": false,
+            "F": false,
             "G": true,
             "A": true,
-            "H": true
+            "H": false
         }
     }
 }

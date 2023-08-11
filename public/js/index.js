@@ -7,19 +7,26 @@ const chordCtx = chordCanvas.getContext('2d');
 // variables
 let config;
 let chords;
+let rows;
 
-const font = new FontFace('Poppins', 'url(https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap)');
 const activeChords = [];
 
 let loopInterval;
+let loopRowIndex = 0;
 
 async function download() {
+
+    // Wait for the font to be loaded
+    await loadFont();
 
     // fetching config and storing into variable
     config = await getJson("../config.json");
 
     // fetching chords and storing into variable
     chords = await getJson("../chords.json");
+
+    // fetching rows and storing into variable
+    rows = await getJson("../rows.json");
 
     // start of the program
     start();
@@ -30,24 +37,35 @@ download();
 function start() {
 
     // sorting just active chords into activeChords
-    configFlat(config);
+    configFlat(config.chords);
 
     // animating loading bar
-    load.style.animation = `load-animation ${config.timer/1000}s linear infinite`;
+    load.style.animationDuration = `${config.timer/1000}s`;
 
     // ctx settings
     chordCtx.textBaseline = "middle";
     chordCtx.textAlign = "center";
 
-    // looping every X seconds that can be set in config.json
-    loopInterval = setInterval(() => loop(), config.timer);
-    loop();
+    // scale canvas
+    /*
+    if (window.innerWidth <= 875) {
+        chordCanvas.width = window.innerWidth * 0.95;
+        chordCanvas.height = 375 * (window.innerWidth * 0.95 / 850);
+    }
+    */
+
+    // looping every X seconds that can be set in config.json (or rows.json)
+    if (config.chordRow.enabled) loopChordRow();
+    else {
+        loopInterval = setInterval(() => loop(), config.timer);
+        loop();
+    }
 }
 
-function loop() {
+function loop(rowChord) {
 
     // generating random chord
-    const chord = randomItem(activeChords);
+    const chord = rowChord === undefined ? randomItem(activeChords) : rowChord;
     const rootNote = chord.charAt(0);
     const type = chord.substring(1);
 
@@ -62,7 +80,7 @@ function loop() {
     const postionAdjustNum = positionAdjustment(chordMap);
 
 
-    // chord name change
+    // chord name change (if type is major, eliminate it)
     chordElmnt.innerHTML = type === 'major' ? rootNote : chord;
 
     // clearing the canvas

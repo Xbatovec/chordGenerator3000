@@ -3,7 +3,7 @@ function positionAdjustment(chordMap) {
     let farthestPos = 0;
     let nearestPos = 69420;
     
-    // find farthest and nearest position in achord
+    // find farthest and nearest position in a chord
     chordMap.activePoints.forEach(finger => {
         finger.split(' #')[0].split(', ').forEach(coords => {
 
