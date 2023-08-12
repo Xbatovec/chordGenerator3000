@@ -60,9 +60,9 @@ body {
     text-align: center;
 }
 
-#chord {
+#chord, .chord-editable {
     font-size: 250px;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     background: -webkit-linear-gradient(left bottom, #9fa3f3, #5d25c5);
     background-clip: unset;
     -webkit-background-clip: text;
@@ -71,4 +71,32 @@ body {
 
 #chord-map {
     position: relative;
+}
+
+/* copy */
+.chord-editable {
+    font-size: 175px !important;
+    caret-color: #dedfff;
+}
+
+.chord-editable:focus {
+    outline: none;
+}
+
+#copy-header {
+    font-size: 25px;
+    font-family: Poppins, sans-serif;
+    background: -webkit-linear-gradient(left bottom, #9fa3f3, #5d25c5);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+#copy-text {
+    width: 750px; height: 150px;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+    color: #d9dbfa;
+    background-color: var(--background);
 }

@@ -12,8 +12,12 @@
 <body>
     <div id="plane">
         <div id="plane-container">
-            <h1 id="chord">lol</h1>
-            <canvas id="chord-map" width="850px" height="375px"></canvas>
+            <h1 id="chord" class="chord-editable" spellcheck="false" contenteditable="true" oninput="draw()">Cmajor</h1>
+            <canvas id="chord-map" width="850px" height="375px" style="cursor: pointer;" onclick="canvasClicked(event)"></canvas>
+            <div id="copy-box">
+                <textarea id="copy-text" spellcheck="false"></textarea>
+                <h2 id="copy-header" onclick="copyCode()">Click to copy</h2>
+            </div>
         </div>
     </div>
 </body>
