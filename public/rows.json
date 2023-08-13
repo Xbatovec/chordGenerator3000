@@ -1,4 +1,3 @@
 {
-    "default": ["Emi; 3000", "Gmajor; 7000", "Dmajor; 1000", "Amajor; 10000"],
-    "test": ["C#mi; 3000", "E#mi; 4000", "D#mi; 1500"]
+    "default": ["Emi; 3000", "Gmajor; 7000", "Dmajor; 1000", "Amajor; 10000"]
 }

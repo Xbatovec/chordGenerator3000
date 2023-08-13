@@ -25,6 +25,7 @@ async function download() {
     config = await getJson("../config.json");
 
     // start of the program
+    responsivity();
     draw();
 }
 
@@ -213,4 +214,21 @@ function clear() {
     chordMap.inactiveStrings = [];
     positionAdjustNum = 0;
     draw();
+}
+
+// responsive behaviour
+window.addEventListener('resize', () => responsivity());
+function responsivity() {
+    
+    const elmnt = elId('plane-container');
+    const width = elId('plane-container').offsetWidth;
+    const height = elId('plane-container').offsetHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+
+    if (windowWidth > 875) return;
+
+    const scale = (window.innerWidth * 0.95) / elId('plane-container').offsetWidth;
+    elmnt.style.transform = `scale(${scale})`;
 }

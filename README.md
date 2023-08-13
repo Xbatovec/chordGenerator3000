@@ -13,7 +13,7 @@ Once it starts it will run on [localhost:1212](http://localhost:1212/). (You can
 ```
 The time unit is in miliseconds (1s = 1000ms)
 
-rootNote stands for a root note of chords ("C", "C#", "Db", "D", "E" ...)
+rootNote stands for a root note of chords ("C", "C#", "Db", "D", ...)
 chordType can be practically anything ("major", "mi", "maj7", ...)
 rootNote & chordType must be same in every json file.
 

@@ -46,13 +46,8 @@ function start() {
     chordCtx.textBaseline = "middle";
     chordCtx.textAlign = "center";
 
-    // scale canvas
-    /*
-    if (window.innerWidth <= 875) {
-        chordCanvas.width = window.innerWidth * 0.95;
-        chordCanvas.height = 375 * (window.innerWidth * 0.95 / 850);
-    }
-    */
+    // responsive behaviour
+    responsivity();
 
     // looping every X seconds that can be set in config.json (or rows.json)
     if (config.chordRow.enabled) loopChordRow();
@@ -113,4 +108,21 @@ function loop(rowChord) {
 
     // drawing fingers
     drawingPoints(chordMap, width, height, positionAdjustNum);
+}
+
+// responsive behaviour
+window.addEventListener('resize', () => responsivity());
+function responsivity() {
+    
+    const elmnt = elId('plane-container');
+    const width = elId('plane-container').offsetWidth;
+    const height = elId('plane-container').offsetHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+
+    if (windowWidth > 875) return;
+
+    const scale = (window.innerWidth * 0.95) / elId('plane-container').offsetWidth;
+    elmnt.style.transform = `scale(${scale})`;
 }
