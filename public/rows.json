@@ -1,3 +1,12 @@
 {
-    "default": ["Emi; 3000", "Gmajor; 7000", "Dmajor; 1000", "Amajor; 10000"]
+    "default": ["Emi; 3000", "Gmajor; 7000", "Dmajor; 1000", "Amajor; 10000"],
+    "loopAllDefaults": [
+        "Cmajor", "C#major", "D#major", "Emajor", "Fmajor", "F#major", "Gmajor", "G#major", "Amajor", "Bbmajor", "Bmajor",
+        "Cmi", "C#mi", "D#mi", "Emi", "Fmi", "F#mi", "Gmi", "G#mi", "Ami", "Bbmi", "Bmi",
+        "Cmi7", "C#mi7", "D#mi7", "Emi7", "Fmi7", "F#mi7", "Gmi7", "G#mi7", "Ami7", "Bbmi7", "Bmi7",
+        "C6", "C#6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6", "Bb6", "B6",
+        "C7", "C#7", "D#7", "E7", "F7", "F#7", "G7", "G#7", "A7", "Bb7", "B7",
+        "Cmaj7", "C#maj7", "D#maj7", "Emaj7", "Fmaj7", "F#maj7", "Gmaj7", "G#maj7", "Amaj7", "Bbmaj7", "Bmaj7"
+    ],
+    "justOne": ["Cmaj7"]
 }

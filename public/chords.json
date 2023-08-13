@@ -139,6 +139,146 @@
             "inactiveStrings": [6]
         }
     },
+    "mi7": {
+        "C": {
+            "activePoints": ["1;3, 3;3, 5;3 #1","2;4 #2","4;5 #3"],
+            "inactiveStrings": [6]
+        },
+        "C#": {
+            "activePoints": ["1;4, 3;4, 5;4 #1","2;5 #2","4;6 #3"],
+            "inactiveStrings": [6]
+        },
+        "Db": {
+            "activePoints": ["1;4, 3;4, 5;4 #1","2;5 #2","4;6 #3"],
+            "inactiveStrings": [6]
+        },
+        "D": {
+            "activePoints": ["2;1 #1","1;1 #2","3;2 #3"],
+            "inactiveStrings": [5,6]
+        },
+        "D#": {
+            "activePoints": ["4;1 #1","2;2 #2","1;2 #3","3;3 #4"],
+            "inactiveStrings": [5,6]
+        },
+        "Eb": {
+            "activePoints": ["4;1 #1","2;2 #2","1;2 #3","3;3 #4"],
+            "inactiveStrings": [5,6]
+        },
+        "E": {
+            "activePoints": ["5;1 #1","4;1 #2","2;2 #4"],
+            "inactiveStrings": []
+        },
+        "F": {
+            "activePoints": ["1;1, 2;1, 3;1, 4;1, 6;1 #1","5;3 #3"],
+            "inactiveStrings": []
+        },
+        "F#": {
+            "activePoints": ["1;2, 2;2, 3;2, 4;2, 6;2 #1","5;4 #3"],
+            "inactiveStrings": []
+        },
+        "Gb": {
+            "activePoints": ["1;2, 2;2, 3;2, 4;2, 6;2 #1","5;4 #3"],
+            "inactiveStrings": []
+        },
+        "G": {
+            "activePoints": ["1;3, 2;3, 3;3, 4;3, 6;3 #1","5;5 #3"],
+            "inactiveStrings": []
+        },
+        "G#": {
+            "activePoints": ["1;4, 2;4, 3;4, 4;4, 6;4 #1","5;6 #3"],
+            "inactiveStrings": [5,6]
+        },
+        "Ab": {
+            "activePoints": ["1;4, 2;4, 3;4, 4;4, 6;4 #1","5;6 #3"],
+            "inactiveStrings": [5,6]
+        },
+        "A": {
+            "activePoints": ["2;1 #1","4;2 #2"],
+            "inactiveStrings": [6]
+        },
+        "A#": {
+            "activePoints": ["1;1, 3;1, 5;1 #1","2;2 #2","4;3 #3"],
+            "inactiveStrings": [6]
+        },
+        "Bb": {
+            "activePoints": ["1;1, 3;1, 5;1 #1","2;2 #2","4;3 #3"],
+            "inactiveStrings": [6]
+        },
+        "B": {
+            "activePoints": ["1;2, 3;2, 5;2 #1","2;3 #2","4;4 #3"],
+            "inactiveStrings": [6]
+        }
+    },
+    "6": {
+        "C": {
+            "activePoints": ["1;5, 2;5, 3;5, 4;5, 6;5 #1","5;7 #3"],
+            "inactiveStrings": []
+        },
+        "C#": {
+            "activePoints": ["1;1, 3;1, 5;1, 6;1 #1","2;2 #2","4;3 #3"],
+            "inactiveStrings": []
+        },
+        "Db": {
+            "activePoints": ["1;1, 3;1, 5;1, 6;1 #1","2;2 #2","4;3 #3"],
+            "inactiveStrings": []
+        },
+        "D": {
+            "activePoints": ["3;2 #1","1;2 #2"],
+            "inactiveStrings": [5,6]
+        },
+        "D#": {
+            "activePoints": ["2;1, 4;1 #1","3;2 #3","1;2 #4"],
+            "inactiveStrings": [5,6]
+        },
+        "Eb": {
+            "activePoints": ["2;1, 4;1 #1","3;2 #3","1;2 #4"],
+            "inactiveStrings": [5,6]
+        },
+        "E": {
+            "activePoints": ["2;2, 4;2 #1","3;4 #3","1;4 #4"],
+            "inactiveStrings": []
+        },
+        "F": {
+            "activePoints": ["1;5, 3;5, 5;5, 6;5 #1","2;6 #2","4;7 #3"],
+            "inactiveStrings": []
+        },
+        "F#": {
+            "activePoints": ["1;6, 3;6, 5;6, 6;6 #1","2;7 #2","4;8 #3"],
+            "inactiveStrings": []
+        },
+        "Gb": {
+            "activePoints": ["1;6, 3;6, 5;6, 6;6 #1","2;7 #2","4;8 #3"],
+            "inactiveStrings": []
+        },
+        "G": {
+            "activePoints": ["5;2 #2","6;3 #3"],
+            "inactiveStrings": []
+        },
+        "G#": {
+            "activePoints": ["1;1, 2;1, 3;1, 4;1, 6;1 #1","5;2 #3"],
+            "inactiveStrings": []
+        },
+        "Ab": {
+            "activePoints": ["1;1, 2;1, 3;1, 4;1, 6;1 #1","5;2 #3"],
+            "inactiveStrings": []
+        },
+        "A": {
+            "activePoints": ["1;2, 2;2, 3;2, 4;2, 6;2 #1","5;4 #3"],
+            "inactiveStrings": []
+        },
+        "A#": {
+            "activePoints": ["1;3, 2;3, 3;3, 4;3, 6;3 #1","5;5 #3"],
+            "inactiveStrings": []
+        },
+        "Bb": {
+            "activePoints": ["1;3, 2;3, 3;3, 4;3, 6;3 #1","5;5 #3"],
+            "inactiveStrings": []
+        },
+        "B": {
+            "activePoints": ["4;1 #1","3;1 #2","1;2 #4"],
+		    "inactiveStrings": [5,6]
+        }
+    },
     "7": {
         "C": {
             "activePoints": ["2;1 #1", "4;2 #2", "5;3 #3", "3;3 #4"],
@@ -205,8 +345,78 @@
             "inactiveStrings": [6]
         },
         "B": {
-            "activePoints": ["1;2, 3;2, 5;2 #1", "4;4 #3", "2;4 #4"],
+            "activePoints": ["4;1 #1","5;2 #2","3;2 #3","1;2 #4"],
             "inactiveStrings": [6]
+        }
+    },
+    "maj7": {
+        "C": {
+            "activePoints": ["1;7 #1","2;8 #2","3;9 #3","4;10 #4"],
+            "inactiveStrings": []
+        },
+        "C#": {
+            "activePoints": ["1;8 #1","2;9 #2","3;10 #3","4;11 #4"],
+            "inactiveStrings": []
+        },
+        "Db": {
+            "activePoints": ["1;8 #1","2;9 #2","3;10 #3","4;11 #4"],
+            "inactiveStrings": []
+        },
+        "D": {
+            "activePoints": ["1;2, 2;2, 3;2 #1"],
+            "inactiveStrings": [5,6]
+        },
+        "D#": {
+            "activePoints": ["1;3, 2;3, 3;3, 6;3 #1","4;5 #3","5;6 #4"],
+            "inactiveStrings": []
+        },
+        "Eb": {
+            "activePoints": ["1;3, 2;3, 3;3, 6;3 #1","4;5 #3","5;6 #4"],
+            "inactiveStrings": []
+        },
+        "E": {
+            "activePoints": ["1;4, 2;4, 3;4, 6;4 #1","4;6 #3","5;7 #4"],
+            "inactiveStrings": []
+        },
+        "F": {
+            "activePoints": ["2;1 #1","3;2 #2","4;3 #3"],
+            "inactiveStrings": [5,6]    
+        },
+        "F#": {
+            "activePoints": ["1;2, 2;2, 6;2 #1","4;3 #2","3;3 #3","5;4 #4"],
+            "inactiveStrings": []
+        },
+        "Gb": {
+            "activePoints": ["1;2, 2;2, 6;2 #1","4;3 #2","3;3 #3","5;4 #4"],
+            "inactiveStrings": []
+        },
+        "G": {
+            "activePoints": ["1;3, 2;3, 6;3 #1","4;4 #2","3;4 #3","5;5 #4"],
+            "inactiveStrings": []
+        },
+        "G#": {
+            "activePoints": ["1;4, 2;4, 6;4 #1","4;5 #2","3;5 #3","5;6 #4"],
+            "inactiveStrings": []
+        },
+        "Ab": {
+            "activePoints": ["1;4, 2;4, 6;4 #1","4;5 #2","3;5 #3","5;6 #4"],
+            "inactiveStrings": []
+        },
+        "A": {
+            "activePoints": ["3;1 #1","4;2 #2","2;2 #3"],
+            "inactiveStrings": []
+        },
+        "A#": {
+            "activePoints": ["1;1, 5;1, 6;1 #1","3;2 #2","4;3 #3","2;3 #4"],
+            "inactiveStrings": []
+        },
+        "Bb": {
+            "activePoints": ["1;1, 5;1, 6;1 #1","3;2 #2","4;3 #3","2;3 #4"],
+            "inactiveStrings": []
+        },
+        "B": {
+            "activePoints": ["1;2, 5;2, 6;2 #1","3;3 #2","4;4 #3","2;4 #4"],
+            "inactiveStrings": []
         }
     }
 }

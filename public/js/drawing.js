@@ -7,7 +7,7 @@ function positionAdjustment(chordMap) {
     chordMap.activePoints.forEach(finger => {
         finger.split(' #')[0].split(', ').forEach(coords => {
 
-            const pos = coords.split(";")[1];
+            const pos = parseInt(coords.split(";")[1]);
             if (pos > farthestPos) farthestPos = pos;
             if (pos < nearestPos) nearestPos = pos;
         });

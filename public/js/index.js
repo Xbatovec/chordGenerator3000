@@ -40,7 +40,7 @@ function start() {
     configFlat(config.chords);
 
     // animating loading bar
-    load.style.animationDuration = `${config.timer/1000}s`;
+    load.style.animation = `load-animation ${config.timer/1000}s linear infinite`;
 
     // ctx settings
     chordCtx.textBaseline = "middle";
