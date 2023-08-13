@@ -3,11 +3,14 @@ const chordElmnt = elId("chord");
 const chordCanvas = elId("chord-map");
 const chordCtx = chordCanvas.getContext('2d');
 
+// variables
 let chordMap = {
-    activePoints: [],
-    inactiveStrings: []
+    activePoints: ["2;1 #1","4;2 #2","5;3 #3"],
+    inactiveStrings: [6]
 };
-let postionAdjustNum = 0;
+let positionAdjustNum = 0;
+
+let config;
 
 // ctx settings
 chordCtx.textBaseline = "middle";
@@ -18,6 +21,9 @@ async function download() {
     // Wait for the font to be loaded
     await loadFont();
 
+    // fetching config and storing into variable
+    config = await getJson("../config.json");
+
     // start of the program
     draw();
 }
@@ -26,8 +32,9 @@ download();
 
 function draw() {
 
-    const rootNote = chordElmnt.innerHTML.charAt(0);
-    const type = chordElmnt.innerHTML.substring(1);
+    const chord = chordElmnt.innerHTML;
+    const rootNote = chord.charAt(0) + ((chord.charAt(1) === '#' || chord.charAt(1) === 'b') ? chord.charAt(1) : '');
+    const type = chord.substring((chord.charAt(1) === '#' || chord.charAt(1) === 'b') ? 2 : 1);
 
     // storing canvas properties
     const width = chordCanvas.width;
@@ -36,7 +43,7 @@ function draw() {
     if (!chordMap.activePoints.length) chordMap.activePoints = ["-1;-1 #0"];
 
     // change chord code copy element value
-    elId("copy-text").value = `"${type}": {\n\t"${rootNote}": {\n\t\t"activePoints": ${JSON.stringify(chordMap.activePoints.filter(item => !item.includes('#0')))},\n\t\t"unactiveStrings": ${JSON.stringify(chordMap.inactiveStrings)}\n\t}\n}`;
+    elId("copy-text").value = `"${type}": {\n\t"${rootNote}": {\n\t\t"activePoints": ${JSON.stringify(chordMap.activePoints.filter(item => !item.includes('#0')))},\n\t\t"inactiveStrings": ${JSON.stringify(chordMap.inactiveStrings)}\n\t}\n}`;
 
     // clearing the canvas
     chordCtx.clearRect(0, 0, width, height);
@@ -52,10 +59,10 @@ function draw() {
 
     // drawing coordinates
     drawingLetters(height);
-    drawingNumbers(width, postionAdjustNum);
+    drawingNumbers(width, positionAdjustNum);
 
     // drawing fingers
-    drawingPoints(chordMap, width, height, postionAdjustNum);
+    drawingPoints(chordMap, width, height, positionAdjustNum);
 }
 
 function canvasClicked(event) {
@@ -69,20 +76,19 @@ function canvasClicked(event) {
 
     if (isPointInRectangle(x, y, 0, 0, width, 35)) changePositionAdjustment();
     else if (isPointInRectangle(x, y, 40, 36, 90, height)) changeInactiveString(y, height);
-    else if (isPointInRectangle(x, y, 91, 36, 830, height)) changeActivePoints(x, y, width, height);
+    else if (isPointInRectangle(x, y, 91, 36, 830, height)) changeActivePoints(x, y, height);
 }
 
 function changePositionAdjustment(x, y) {
     
-    const savedpostionAdjustNum = postionAdjustNum;
+    const savedpositionAdjustNum = positionAdjustNum;
 
-    postionAdjustNum = postionAdjustNum + 1 > 16 ? 0 : postionAdjustNum + 1;
-    if (postionAdjustNum > 0 && postionAdjustNum < 3) postionAdjustNum = 3;
+    positionAdjustNum = positionAdjustNum + 1 > 16 ? 0 : positionAdjustNum + 1;
+    if (positionAdjustNum > 0 && positionAdjustNum < 3) positionAdjustNum = 3;
 
     const incrementedActivePoints = [];
-    const move = postionAdjustNum - savedpostionAdjustNum;
+    const move = positionAdjustNum - savedpositionAdjustNum;
 
-    console.log(postionAdjustNum - savedpostionAdjustNum);
     chordMap.activePoints.forEach(item => {
         const result = item.split(' #')[0].split(', ').map(section => {
             // Split each section by semicolon
@@ -120,7 +126,7 @@ function changeInactiveString(y, height) {
     draw();
 }
 
-function changeActivePoints(x, y, width, height) {
+function changeActivePoints(x, y, height) {
 
     let cell = { num: 0, str: 0 };
     let fingerNum = 1;
@@ -129,7 +135,7 @@ function changeActivePoints(x, y, width, height) {
 
     // get str and num values
     for (let i = 0; i < 6; i++) {
-        if (x < 830 - (830-91) * (i / 4) && i < 4) cell.num = 4-i + postionAdjustNum - (postionAdjustNum ? 1 : 0);
+        if (x < 830 - (830-91) * (i / 4) && i < 4) cell.num = 4-i + positionAdjustNum - (positionAdjustNum ? 1 : 0);
         if (y < height - (height-36) * (i / 6)) cell.str = 6-i;
     }
 
@@ -199,4 +205,12 @@ function changeActivePoints(x, y, width, height) {
 function copyCode() {
     elId('copy-text').select();
     document.execCommand('copy');
+}
+
+// clear canvas from active points and crosses
+function clear() {
+    chordMap.activePoints = [];
+    chordMap.inactiveStrings = [];
+    positionAdjustNum = 0;
+    draw();
 }

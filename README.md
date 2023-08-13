@@ -13,7 +13,7 @@ Once it starts it will run on [localhost:1212](http://localhost:1212/). (You can
 ```
 The time unit is in miliseconds (1s = 1000ms)
 
-rootNote must be just one character ("C", "D", "E", "F", ...)
+rootNote stands for a root note of chords ("C", "C#", "Db", "D", "E" ...)
 chordType can be practically anything ("major", "mi", "maj7", ...)
 rootNote & chordType must be same in every json file.
 
@@ -29,7 +29,7 @@ There is one string for each finger used.
 Every string is split into coordinates (2;4, 3;2) and number of finger (#2, #4 ...) ("coordinates numberOfFinger")
 
 Each string have its number:
-E = 1, H = 2, G = 3, D = 4, A = 5, E = 6
+E = 1, B = 2, G = 3, D = 4, A = 5, E = 6
 
 before '#' and after ',' must be a space
 before and after ';' must be no space
@@ -37,7 +37,7 @@ before and after ';' must be no space
 ###### Example:
 ```js
 "major": {
-  "H": {
+  "B": {
     "activePoints": [
       "1;2, 5;2 #1", // 2 pressed point, finger 1
       "4;4 #2", // 1 pressed point, finger 2
@@ -68,6 +68,11 @@ after ';' must be a space
 Each line of json files described.
 
 ### config.json
+```js
+czechChords: "For people from Czechia = true",
+シ
+```
+
 ```js
 config.timer = "General time how long chords will last."
 シ

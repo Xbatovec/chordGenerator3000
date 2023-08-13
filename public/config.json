@@ -1,37 +1,68 @@
 {
+    "czechChords": false,
     "timer": 6000,
     "chordRow": {
-        "enabled": true,
+        "enabled": false,
         "customTimer": true,
-        "row": "default"
+        "row": "test"
     },
     "chords": {
         "major": {
             "C": true,
+            "C#": false,
+            "Db": false,
             "D": true,
+            "D#": false,
+            "Eb": false,
             "E": true,
-            "F": false,
+            "F": true,
+            "F#": false,
+            "Gb": false,
             "G": true,
+            "G#": false,
+            "Ab": false,
             "A": true,
-            "H": false
+            "A#": false,
+            "Bb": false,
+            "B": true
         },
         "mi": {
-            "C": false,
+            "C": true,
+            "C#": false,
+            "Db": false,
             "D": true,
+            "D#": false,
+            "Eb": false,
             "E": true,
             "F": false,
-            "G": false,
+            "F#": true,
+            "Gb": false,
+            "G": true,
+            "G#": false,
+            "Ab": false,
             "A": true,
-            "H": false
+            "A#": false,
+            "Bb": false,
+            "B": true
         },
         "7": {
             "C": false,
+            "C#": false,
+            "Db": false,
             "D": true,
+            "D#": false,
+            "Eb": false,
             "E": false,
             "F": false,
+            "F#": false,
+            "Gb": false,
             "G": true,
-            "A": true,
-            "H": false
+            "G#": false,
+            "Ab": false,
+            "A": false,
+            "A#": false,
+            "Bb": false,
+            "B": true
         }
     }
 }

@@ -58,7 +58,7 @@ function drawingCrosses(chordMap, height) {
 // drawing letters
 function drawingLetters(height) {
 
-    const letters = ['E', 'H', 'G', 'D', 'A', 'E'];
+    const letters = ['E', config.czechChords ? 'H' : 'B', 'G', 'D', 'A', 'E'];
     for (let i = 0; i < 6; i++) {
 
         const points = { x: 15, y: 65 + (height-105) * i / 5 };
@@ -69,19 +69,19 @@ function drawingLetters(height) {
 }
 
 // drawing numbers
-function drawingNumbers(width, postionAdjustNum) {
+function drawingNumbers(width, positionAdjustNum) {
 
     for (let i = 0; i < 4; i++) {
 
         const points = { x: 90 + (width-110) * i / 4 + (width-110)/8, y: 20 };
         const color = '#b7baf5';
 
-        drawText(i+postionAdjustNum + (postionAdjustNum ? 0 : 1), points.x, points.y, 37, color);
+        drawText(i+positionAdjustNum + (positionAdjustNum ? 0 : 1), points.x, points.y, 37, color);
     }
 }
 
 // drawing points
-function drawingPoints(chordMap, width, height, postionAdjustNum) {
+function drawingPoints(chordMap, width, height, positionAdjustNum) {
 
     const color = '#9fa3f3';
     
@@ -92,7 +92,7 @@ function drawingPoints(chordMap, width, height, postionAdjustNum) {
             
             const pos = {
                 str: parseInt(coords.split(";")[0]) - 1,
-                num: parseInt(coords.split(";")[1]) - 1 - postionAdjustNum + (postionAdjustNum ? 1 : 0)
+                num: parseInt(coords.split(";")[1]) - 1 - positionAdjustNum + (positionAdjustNum ? 1 : 0)
             };
             const modifiedPos = {
                 str: 65 + (height-105) * pos.str / 5,

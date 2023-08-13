@@ -66,8 +66,19 @@ function loop(rowChord) {
 
     // generating random chord
     const chord = rowChord === undefined ? randomItem(activeChords) : rowChord;
-    const rootNote = chord.charAt(0);
-    const type = chord.substring(1);
+    const rootNote = chord.charAt(0) + ((chord.charAt(1) === '#' || chord.charAt(1) === 'b') ? chord.charAt(1) : '');
+    const type = chord.substring((chord.charAt(1) === '#' || chord.charAt(1) === 'b') ? 2 : 1);
+
+    // edit chord for proper display
+    let shownChord = chord;
+    if (config.czechChords) {
+        switch (true) {
+            case shownChord.slice(0, 2) === 'Bb': shownChord = 'B' + shownChord.slice(2); break;
+            case shownChord.charAt(0) === 'B': shownChord = 'H' + shownChord.slice(1); break;
+            default: break;
+        }
+    }
+    if (type === 'major') shownChord = shownChord.slice(0, -5);
 
     // getting chord properties
     const chordMap = chords[type][rootNote];
@@ -77,11 +88,11 @@ function loop(rowChord) {
     const height =  chordCanvas.height;
 
     // position adjustment
-    const postionAdjustNum = positionAdjustment(chordMap);
+    const positionAdjustNum = positionAdjustment(chordMap);
 
 
     // chord name change (if type is major, eliminate it)
-    chordElmnt.innerHTML = type === 'major' ? rootNote : chord;
+    chordElmnt.innerHTML = shownChord;
 
     // clearing the canvas
     chordCtx.clearRect(0, 0, width, height);
@@ -98,8 +109,8 @@ function loop(rowChord) {
 
     // drawing coordinates
     drawingLetters(height);
-    drawingNumbers(width, postionAdjustNum);
+    drawingNumbers(width, positionAdjustNum);
 
     // drawing fingers
-    drawingPoints(chordMap, width, height, postionAdjustNum);
+    drawingPoints(chordMap, width, height, positionAdjustNum);
 }
