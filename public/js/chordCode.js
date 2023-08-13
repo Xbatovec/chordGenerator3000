@@ -221,11 +221,7 @@ window.addEventListener('resize', () => responsivity());
 function responsivity() {
     
     const elmnt = elId('plane-container');
-    const width = elId('plane-container').offsetWidth;
-    const height = elId('plane-container').offsetHeight;
     const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
 
     if (windowWidth > 875) return;
 
