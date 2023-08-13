@@ -4,7 +4,9 @@ Program that visualize chords, loop rows of chords or randomly choose chords.
 ## How to start and use
 Program runs on `node.js v19.0.0` but should also work on older versions.
 
-To start the program run `npm run app` in a console in a app.js location.
+To install all required node modules run `npm install`.
+
+To start the program run `npm run app` or `node app.js` in a console in a app.js location.
 
 Once it starts it will run on [localhost:1212](http://localhost:1212/). (You can change port in `app.js` if you want)
 
